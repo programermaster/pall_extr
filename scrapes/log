@@ -1,0 +1,9 @@
+pushed cat http://www.pall.com/main/product-list.page
+getting https://www.neobits.com/phpsecurenew/ScrapeTracker.php?site=www.pall.com
+Array
+(
+)
+pop-up product urls
+getting http://www.pall.com/main/laboratory/product.page?lid=gri78m6o
+parse product page
+4249<br>22.046<br>

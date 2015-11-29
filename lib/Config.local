@@ -1,0 +1,812 @@
+<?php
+
+/*
+  12/03/2012
+
+  By Steve Fatula of 5 Diamond IT Consulting
+
+  This class handles localized server configuration information
+
+*/
+
+$MysqlBin = "/usr/bin/mysql";
+$DefaultEmailErrorsTo = "soho@fatula.us";
+$XLS2CSV = "/usr/local/bin/xls2csv";
+$SED = "/bin/sed";
+$WINE = "/usr/bin/wine";
+$WGET = "/usr/bin/wget";
+$PERL = "/usr/bin/perl";
+$PHPPATH = "/usr/bin/php";
+$LOCALURL = "www.neobits.com";
+$COOKIEDOMAIN = "neobits.com";
+
+$ScreenMenuXML = <<<EOD
+<MenuLayout>
+	<Menu>
+		<Title>Admin</Title>
+		<Screens>
+			<Screen>
+				<FileName>UserAccess.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/UserAccess.php</URL>
+				<Title>User Access</Title>
+				<Cache>False</Cache>
+				<Environment>
+					<EMAIL_ERRORS_TO>nick.cosic@cp-dev.com</EMAIL_ERRORS_TO>
+				</Environment>
+			</Screen>
+			<Screen>
+				<FileName>Login.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/Login.php</URL>
+				<Title>DoNotDisplay</Title>
+				<Cache>False</Cache>
+				<Environment>
+					<EMAIL_ERRORS_TO>nick.cosic@cp-dev.com</EMAIL_ERRORS_TO>
+				</Environment>
+			</Screen>
+			<Screen>
+				<FileName>Login.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/Login.php?Action=Logout</URL>
+				<Title>Logout</Title>
+				<Cache>False</Cache>
+			</Screen>
+		</Screens>
+	</Menu>
+	<Menu>
+		<Title>QB &amp; Acevo</Title>
+		<Screens>
+			<Screen>
+				<FileName>QuickBooksAdmin.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/QuickBooksAdmin.php</URL>
+				<Title>Add Product to QB</Title>
+				<Environment>
+					<EMAIL_ERRORS_TO>nick.cosic@cp-dev.com</EMAIL_ERRORS_TO>
+				</Environment>
+			</Screen>
+			<Screen>
+				<FileName>QuickbooksCategScreen.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/QuickbooksCategScreen.php</URL>
+				<Title>QB Categorization</Title>
+				<Environment>
+					<EMAIL_ERRORS_TO>nick.cosic@cp-dev.com</EMAIL_ERRORS_TO>
+				</Environment>
+			</Screen>
+			<Screen>
+				<FileName>QuickbooksRepFieldUpdate.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/QuickbooksRepFieldUpdate.php</URL>
+				<Title>QB Rep Field Update</Title>
+				<Environment>
+					<EMAIL_ERRORS_TO>nick.cosic@cp-dev.com</EMAIL_ERRORS_TO>
+				</Environment>
+			</Screen>
+			<Screen>
+				<FileName>SalexTaxCharged.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/SalexTaxCharged.php</URL>
+				<Title>Salex Tax Charged</Title>
+				<Environment>
+					<EMAIL_ERRORS_TO>boske87@yahoo.com</EMAIL_ERRORS_TO>
+				</Environment>
+			</Screen>
+			<Screen>
+				<FileName>EmailInvoiceRequests.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/EmailInvoiceRequests.php</URL>
+				<Title>Request Invoices from Vendors</Title>
+				<Environment>
+					<EMAIL_ERRORS_TO>neobits@cp-dev.com</EMAIL_ERRORS_TO>
+				</Environment>
+			</Screen>
+			<Screen>
+				<FileName>QuickBooksQueue.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/QuickBooksQueue.php</URL>
+				<Title>Quick Books Queue</Title>
+				<Environment>
+					<EMAIL_ERRORS_TO>neobits@cp-dev.com</EMAIL_ERRORS_TO>
+				</Environment>
+			</Screen>
+			
+		</Screens>
+			<Menu>
+				<Title>Acevo, Admin</Title>
+					<Screens>
+						<Screen>
+							<FileName>AmazonShipment.php</FileName>
+							<URL>https://www.neobits.com/phpsecurenew/AmazonShipment.php</URL>
+							<Title>Amazon Order List</Title>
+							<Environment>
+								<EMAIL_ERRORS_TO>nick.cosic@cp-dev.com</EMAIL_ERRORS_TO>
+							</Environment>
+						</Screen>
+						<Screen>
+							<FileName>AcevoPdfReport.php</FileName>
+							<URL>https://www.neobits.com/phpsecurenew/AcevoPdfReport.php</URL>
+							<Title>Acevo Pdf Report</Title>
+							<Environment>
+								<EMAIL_ERRORS_TO>boske87@yahoo.com</EMAIL_ERRORS_TO>
+							</Environment>
+						</Screen>
+						 <Screen>
+							<FileName>AcevoInvoiceData.php</FileName>
+							<URL>https://www.neobits.com/phpsecurenew/AcevoInvoiceData.php</URL>
+							<Title>Acevo Invoice Data</Title>
+							<Environment>
+								<EMAIL_ERRORS_TO>boske87@yahoo.com</EMAIL_ERRORS_TO>
+							</Environment>
+						</Screen>
+						 <Screen>
+							<FileName>AcevoPdfPercSuccess.php</FileName>
+							<URL>https://www.neobits.com/phpsecurenew/AcevoPdfPercSuccess.php</URL>
+							<Title>Acevo PDF Extraction Success Rate</Title>
+							<Environment>
+								<EMAIL_ERRORS_TO>hmisko@hotmail.com</EMAIL_ERRORS_TO>
+							</Environment>
+						</Screen>
+				</Screens>
+		</Menu>
+	</Menu>
+		<Menu>
+		<Title>Suppliers</Title>
+			<Screens>
+				<Screen>
+					<FileName>SupplierAttributesScreen.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/SupplierAttributesScreen.php</URL>
+					<Title>Supplier Attributes</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>neobits@cp-dev.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				<Screen>
+					<FileName>ManufacturerAttributes.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/ManufacturerAttributes.php</URL>
+					<Title>Manufacturer Attributes</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>hmisko@hotmail.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				<Screen>
+					<FileName>SupplierLogin.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/SupplierLogin.php</URL>
+					<Title>Supplier Login</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>neobits@cp-dev.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				<Screen>
+						<FileName>OtherLogins.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/OtherLogins.php</URL>
+						<Title>Other Logins</Title>
+						<Environment>
+								<EMAIL_ERRORS_TO>neobits@cp-dev.com</EMAIL_ERRORS_TO>
+						</Environment>
+				</Screen>
+				<Screen>
+						<FileName>SupplierOnboardingScreen.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/SupplierOnboardingScreen.php</URL>
+						<Title>New Supplier Workflow</Title>
+						<Environment>
+								<EMAIL_ERRORS_TO>neobits@cp-dev.com</EMAIL_ERRORS_TO>
+						</Environment>
+				</Screen>
+				<Screen>
+					<FileName>TestOrderProductIDs.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/TestOrderProductIDs.php</URL>
+					<Title>Test Order Product</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>tweetysha@gmail.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+            	<Screen>
+            		<FileName>SupplierRFQ.php</FileName>
+            		<URL>https://www.neobits.com/phpsecurenew/SupplierRFQ.php</URL>
+            		<Title>Supplier RFQ</Title>
+            		<Environment>
+                    		<EMAIL_ERRORS_TO>dj.mancovic@gmail.com</EMAIL_ERRORS_TO>
+            		</Environment>
+            	</Screen>
+				<Screen>
+            		<FileName>SupplierRFQ-Manage.php</FileName>
+            		<URL>https://www.neobits.com/phpsecurenew/SupplierRFQ-Manage.php</URL>
+            		<Title>Supplier RFQ - Manage</Title>
+            		<Environment>
+                    		<EMAIL_ERRORS_TO>dgoran@cp-dev.vom</EMAIL_ERRORS_TO>
+            		</Environment>
+            	</Screen>
+				<Screen>
+					<FileName>VendorDataRequest.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/VendorDataRequest.php</URL>
+					<Title>Vendor Data Request</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>hmisko@hotmail.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+			</Screens>
+			<Menu>
+				<Title>Inbound Feeds</Title>
+				<Screens>
+					<Screen>
+						<FileName>NoImageMaint.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/NoImageMaint.php</URL>
+						<Title>No Image Images</Title>
+					</Screen>
+					<Screen>
+						<FileName>ScrapeTracker.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/ScrapeTracker.php</URL>
+						<Title>Scrape Tracker</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>hmisko@hotmail.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>PrefixRemover.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/PrefixRemover.php</URL>
+						<Title>Prefix Remover</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>neobits@cp-dev.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+				</Screens>
+			</Menu>
+	</Menu>
+	<Menu>
+		<Title>Content</Title>
+		<Menu>
+			<Title>Products</Title>
+			<Screens>
+				<Screen>
+					<FileName>ProductStockCheck.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/ProductStockCheck.php</URL>
+					<Title>Product Stock Check</Title>
+					<Environment>
+						<ofbizrepl_HOST>host8.commservhost.com</ofbizrepl_HOST>
+						<ofbizrepl_PORT>33060</ofbizrepl_PORT>
+						<EMAIL_ERRORS_TO>goran@cp-dev.com,neobits@cp-dev.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				<Screen>
+					<FileName>ProductStockCheckAll.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/ProductStockCheckAll.php</URL>
+					<Title>Product Extended Check</Title>
+					<Environment>
+						<ofbizrepl_HOST>host8.commservhost.com</ofbizrepl_HOST>
+						<ofbizrepl_PORT>33060</ofbizrepl_PORT>
+						<EMAIL_ERRORS_TO>goran@cp-dev.com,neobits@cp-dev.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				<Screen>
+					<FileName>ProductStockCheck2.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/ProductStockCheck2.php</URL>
+					<Title>Product Stock Check2</Title>
+					<Environment>
+						<ofbizrepl_HOST>host8.commservhost.com</ofbizrepl_HOST>
+						<ofbizrepl_PORT>33060</ofbizrepl_PORT>
+						<EMAIL_ERRORS_TO>goran@cp-dev.com,neobits@cp-dev.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				<Screen>
+					<FileName>ProductStockCheckAll2.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/ProductStockCheckAll2.php</URL>
+					<Title>Product Extended Check2</Title>
+					<Environment>
+						<ofbizrepl_HOST>host8.commservhost.com</ofbizrepl_HOST>
+						<ofbizrepl_PORT>33060</ofbizrepl_PORT>
+						<EMAIL_ERRORS_TO>goran@cp-dev.com,neobits@cp-dev.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				<Screen>
+					<FileName>CaptureProductImage.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/CaptureProductImage.php</URL>
+					<Title>Get Product Image</Title>
+				</Screen>
+				<Screen>
+					<FileName>ProductDuplicates.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/ProductDuplicates.php</URL>
+					<Title>Merge Products</Title>
+				</Screen>
+					<Screen>
+					<FileName>CategorizeProducts.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/CategorizeProducts.php</URL>
+					<Title>Categorize Products</Title>
+				</Screen>
+				<Screen>
+					<FileName>ProductCustomContent.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/ProductCustomContent.php</URL>
+					<Title>Product Custom Content</Title>
+				</Screen>
+        		<Screen>
+            		<FileName>AddProductManuallyToOfbiz.php</FileName>
+            		<URL>https://www.neobits.com/phpsecurenew/AddProductManuallyToOfbiz.php</URL>
+            		<Title>Add Product Manually To Ofbiz</Title>
+            		<Environment>
+                    		<EMAIL_ERRORS_TO>neobits@cp-dev.com</EMAIL_ERRORS_TO>
+            		</Environment>
+        		</Screen>
+        		<Screen>
+            		<FileName>SolrSearchProducts.php</FileName>
+            		<URL>https://www.neobits.com/phpsecurenew/SolrSearchProducts.php</URL>
+            		<Title>Solr Search Products</Title>
+            		<Environment>
+                    		<EMAIL_ERRORS_TO>hmisko@hotmail.com</EMAIL_ERRORS_TO>
+            		</Environment>
+        		</Screen>
+			</Screens>
+		</Menu>
+		<Menu>
+			<Title>Manufacturers</Title>
+			<Screens>
+				<Screen>
+					<FileName>SupplierMfrMap.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/SupplierMfrMap.php</URL>
+					<Title>Manufacturer Map</Title>
+				</Screen>
+				<Screen>
+					<FileName>CaptureMfrLogo.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/CaptureMfrLogo.php</URL>
+					<Title>Manufacturer Logo</Title>
+				</Screen>
+				<Screen>
+					<FileName>DisallowProductSource.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/DisallowProductSource.php</URL>
+					<Title>Disallow Product Source</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>neobits@cp-dev.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				<Screen>
+					<FileName>MfrProdKeywordsSearch.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/MfrProdKeywordsSearch.php</URL>
+					<Title>Manufacturer Products Keywords Search</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>ilija@cp-dev.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>				
+			</Screens>
+		</Menu>
+		<Menu>
+			<Title>Categories</Title>
+			<Screens>
+				<Screen>
+					<FileName>NeobitsTree.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/NeobitsTree.php</URL>
+					<Title>Category Tree</Title>
+				</Screen>
+				<Screen>
+					<FileName>UnmappedFeedCats.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/UnmappedFeedCats.php</URL>
+					<Title>Supplier Category Map</Title>
+				</Screen>
+				<Screen>
+					<FileName>UnmappedSupplierCategories.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/UnmappedSupplierCategories.php</URL>
+					<Title>Unmapped Supplier Categories</Title>
+                    <Environment>
+                        <EMAIL_ERRORS_TO>hmisko@hotmail.com</EMAIL_ERRORS_TO>
+                    </Environment>
+				</Screen>
+                <Screen>
+                    <FileName>MergeCategories.php</FileName>
+                    <URL>https://www.neobits.com/phpsecurenew/MergeCategories.php</URL>
+                    <Title>Merge Categories</Title>
+                </Screen>
+				<Screen>
+					<FileName>CategorizeOfbizProducts.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/CategorizeOfbizProducts.php</URL>
+					<Title>Categorize Ofbiz Products</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>hmisko@hotmail.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				
+			</Screens>
+		</Menu>
+		<Screens>
+			<Screen>
+				<FileName>PricingAndShipping.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/PricingAndShipping.php</URL>
+				<Title>Pricing &amp; Shipping</Title>
+				<Environment>
+					<EMAIL_ERRORS_TO>neobits@cp-dev.com</EMAIL_ERRORS_TO>
+				</Environment>
+			</Screen>
+			<Screen>
+				<FileName>sqlScripts.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/sqlScripts.php</URL>
+				<Title>Daily SQL queries</Title>
+				<Environment>
+					<EMAIL_ERRORS_TO>neobits@cp-dev.com</EMAIL_ERRORS_TO>
+				</Environment>
+			</Screen>
+    		<Screen>
+        		<FileName>CustomerBlacklist.php</FileName>
+        		<URL>https://www.neobits.com/phpsecurenew/CustomerBlacklist.php</URL>
+        		<Title>Customer Blacklist</Title>
+        		<Environment>
+                		<EMAIL_ERRORS_TO>ilija@cp-dev.com</EMAIL_ERRORS_TO>
+        		</Environment>
+    		</Screen>
+		</Screens>
+	</Menu>
+	<Menu>
+		<Title>Marketing</Title>
+		<Screens>
+			<Screen>
+				<FileName>RakutenScrapeScreen.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/RakutenScrapeScreen.php</URL>
+				<Title>Rakuten Scrape</Title>
+				<Environment>
+					<EMAIL_ERRORS_TO>ramo@cp-dev.com</EMAIL_ERRORS_TO>
+				</Environment>
+			</Screen>
+			<Screen>
+				<FileName>AdwordsBidAdjustments.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/AdwordsBidAdjustments.php</URL>
+				<Title>Adwords Bid Adjustments</Title>
+				<Environment>
+					<adwords_HOST>host8.commservhost.com</adwords_HOST>
+					<EMAIL_ERRORS_TO>mirko@cp-dev.com</EMAIL_ERRORS_TO>
+				</Environment>
+			</Screen> 
+			<Screen>
+				<FileName>AdwordsStats.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/AdwordsStats.php</URL>
+				<Title>Adwords Stats</Title>
+				<Environment>
+					<adwords_HOST>host8.commservhost.com</adwords_HOST>
+					<EMAIL_ERRORS_TO>mirko@cp-dev.com</EMAIL_ERRORS_TO>
+				</Environment>
+			</Screen>
+		</Screens>
+		<Menu>
+			<Title>Marketing Feeds</Title>
+				<Screens>
+					<Screen>
+						<FileName>OutboundFeeds.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/OutboundFeeds.php</URL>
+						<Title>Outbound Feeds</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>hmisko@hotmail.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>ExtendOutboundFeeds.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/ExtendOutboundFeeds.php</URL>
+						<Title>Extend Outbound Feeds</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>goran@cp-dev.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>NewOFParameters.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/NewOFParameters.php</URL>
+						<Title>New Outbound Feeds</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>ilija@cp-dev.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>OutboundFeedsParam.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/OutboundFeedsParam.php</URL>
+						<Title>Main Screen New Outbound Feeds</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>ilija@cp-dev.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+				</Screens>
+		</Menu>
+		<Menu>
+			<Title>Amazon Admin</Title>
+				<Screens>
+						<Screen>
+							<FileName>GroupAmazonProducts.php</FileName>
+							<URL>https://www.neobits.com/phpsecurenew/GroupAmazonProducts.php</URL>
+							<Title>Group Amazon Products</Title>
+							<Environment>
+								<EMAIL_ERRORS_TO>dj.mancovic@gmail.com</EMAIL_ERRORS_TO>
+							</Environment>
+						</Screen>
+						<Screen>
+							<FileName>AmazonBTGMapping.php</FileName>
+							<URL>https://www.neobits.com/phpsecurenew/AmazonBTGMapping.php</URL>
+							<Title>Amazon BTG Mapping</Title>
+							<Environment>
+								<EMAIL_ERRORS_TO>hmisko@hotmail.com</EMAIL_ERRORS_TO>
+							</Environment>
+						</Screen>
+						<Screen>
+							<FileName>ManuallyMatchAmazonItems.php</FileName>
+							<URL>https://www.neobits.com/phpsecurenew/ManuallyMatchAmazonItems.php</URL>
+							<Title>Manually Match Amazon Items</Title>
+							<Environment>
+								<EMAIL_ERRORS_TO>goran@cp-dev.com</EMAIL_ERRORS_TO>
+							</Environment>
+					</Screen>
+					<Screen>
+						<FileName>AmazonImageVisualCheck.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/AmazonImageVisualCheck.php</URL>
+						<Title>Amazon Image Visual Check</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>goran@cp-dev.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+				</Screens>
+		</Menu>
+		<Menu>
+			<Title>Marketplace Admin</Title>
+				<Screens>
+					<Screen>
+						<FileName>MarketplaceMapping.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/MarketplaceMapping.php</URL>
+						<Title>Marketplace Mapping</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>hmisko@hotmail.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>MarketplaceBlacklistProducts.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/MarketplaceBlacklistProducts.php</URL>
+						<Title>Marketplace Blacklist Products</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>hmisko@hotmail.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>CheckMarkCat.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/CheckMarkCat.php</URL>
+						<Title>Check Product Marketplace Categories</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>hmisko@hotmail.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>ManualReporting.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/ManualReporting.php</URL>
+						<Title>CA Monitoring</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>mirkoiv@gmail.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>ProductMarketingStatusCheck.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/ProductMarketingStatusCheck.php</URL>
+						<Title>Product marketing status check screen</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>neobits@cp-dev.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>DiscontinueProductOnMarketplaces.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/DiscontinueProductOnMarketplaces.php</URL>
+						<Title>Discontinue Product On Marketplaces</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>neobits@cp-dev.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>ImportUPC.php</FileName>
+					   <URL>https://www.neobits.com/phpsecurenew/ImportUPC.php</URL>
+						<Title>Import UPC</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>athlon87@gmail.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+				</Screens>
+		</Menu>
+		<Menu>
+			<Title>Analytics</Title>
+				<Screens>
+					<Screen>
+						<FileName>ProductsSalesReport.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/ProductsSalesReport.php</URL>
+						<Title>Products Sales Report</Title>
+						<Environment>
+								<EMAIL_ERRORS_TO>dj.mancovic@gmail.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>NotificationReport.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/NotificationReport.php</URL>
+						<Title>Notification Report</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>goran@cp-dev.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>SalesPerMarkUpRange.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/SalesPerMarkUpRange.php</URL>
+						<Title>Sales Per Mark Up Range</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>nick.cosic@cp-dev.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>AgentIPs.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/AgentIPs.php</URL>
+						<Title>Agent IPs</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>ilija@cp-dev.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>VisitorTracking.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/VisitorTracking.php</URL>
+						<Title>Visitor Tracking</Title>
+						<Environment>
+							<ofbizreadonly_HOST>host8.commservhost.com</ofbizreadonly_HOST>
+							<ofbizreadonly_PORT>33060</ofbizreadonly_PORT>
+							<ofbizextrareadonly_HOST>host8.commservhost.com</ofbizextrareadonly_HOST>
+							<ofbizextrareadonly_PORT>33060</ofbizextrareadonly_PORT>
+							<EMAIL_ERRORS_TO>ilija@cp-dev.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+				</Screens>
+		</Menu>
+	</Menu>
+	<Menu>
+		<Title>Orders</Title>
+			<Screens>
+				<Screen>
+					<FileName>OrderManagement.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/OrderManagement.php</URL>
+					<Title>Order Management</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>mirko@cp-dev.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				<Screen>
+					<FileName>Shipping.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/Shipping.php</URL>
+					<Title>Shipping Status</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>goran@cp-dev.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				<Screen>
+					<FileName>PendingPOs.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/PendingPOs.php</URL>
+					<Title>Pending POs</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>goran@cp-dev.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				<Screen>
+					<FileName>OrderExceptions.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/OrderExceptions.php</URL>
+					<Title>Order Exceptions</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>hmisko@hotmail.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				<Screen>
+					<FileName>RmaRequestManager.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/RmaRequestManager.php</URL>
+					<Title>Returns Management</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>goran@cp-dev.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				<Screen>
+					<FileName>OrderRefunds.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/OrderRefunds.php</URL>
+					<Title>Order Refunds</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>goran@cp-dev.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				<Screen>
+					<FileName>ChargeCreditCard.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/ChargeCreditCard.php</URL>
+					<Title>Charge Credit Card</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>goran@cp-dev.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				<Screen>
+					<FileName>LastAmznOrders.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/LastAmznOrders.php</URL>
+					<Title>Last_Amazon_Orders</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>ilija@cp-dev.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>
+				<Screen>
+					<FileName>QuotePricesPerSupplierMatrix.php</FileName>
+					<URL>https://www.neobits.com/phpsecurenew/QuotePricesPerSupplierMatrix.php</URL>
+					<Title>Quote Prices Per Supplier Matrix</Title>
+					<Environment>
+						<EMAIL_ERRORS_TO>ilija@cp-dev.com</EMAIL_ERRORS_TO>
+					</Environment>
+				</Screen>				
+		</Screens>
+		<Menu>
+			<Title>Order Admin</Title>
+				<Screens>
+					<Screen>
+						<FileName>OrderBlacklist.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/OrderBlacklist.php</URL>
+						<Title>Order Blacklist</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>goran@cp-dev.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>POQueue.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/POQueue.php</URL>
+						<Title>PO Queue</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>goran@cp-dev.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>RmaEmailManager.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/RmaEmailManager.php</URL>
+						<Title>Email Templates Management</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>ivanhoe011@gmail.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>TrackingNumberCriteria.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/TrackingNumberCriteria.php</URL>
+						<Title>Tracking Number Criteria</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>goran@cp-dev.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>ManageExceptionReasons.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/ManageExceptionReasons.php</URL>
+						<Title>Manage Exception Reasons</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>hmisko@hotmail.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+					<Screen>
+						<FileName>OrderShipmentByState.php</FileName>
+						<URL>https://www.neobits.com/phpsecurenew/OrderShipmentByState.php</URL>
+						<Title>Order Shipment By State</Title>
+						<Environment>
+							<EMAIL_ERRORS_TO>hmisko@hotmail.com</EMAIL_ERRORS_TO>
+						</Environment>
+					</Screen>
+				</Screens>
+		</Menu>
+	</Menu>
+	<Menu>
+		<Title>PSD</Title>
+		<Screens>
+			<Screen>
+				<FileName>PSDManageCategories.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/PSDManageCategories.php</URL>
+				<Title>Manage Categories</Title>
+				<Environment>
+					<EMAIL_ERRORS_TO>ilija@cp-dev.com</EMAIL_ERRORS_TO>
+				</Environment>
+			</Screen>
+			<Screen>
+				<FileName>PSDStoresManaging.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/PSDStoresManaging.php</URL>
+				<Title>Manage Stores</Title>
+				<Environment>
+					<EMAIL_ERRORS_TO>hmisko@hotmail.com</EMAIL_ERRORS_TO>
+				</Environment>
+			</Screen>
+		</Screens>
+	</Menu>
+</MenuLayout>
+EOD;
+
+$NonScreenMenuXML = <<<EOD
+<MenuLayout>
+	<Menu>
+		<Screens>
+			<Screen>
+				<FileName>Login.php</FileName>
+				<URL>https://www.neobits.com/phpsecurenew/Login.php</URL>
+				<Title>DoNotDisplay</Title>
+				<Cache>False</Cache>
+				<Environment>
+					<EMAIL_ERRORS_TO>nick.cosic@cp-dev.com</EMAIL_ERRORS_TO>
+				</Environment>
+			</Screen>
+	</Menu>
+</MenuLayout>
+EOD;
+
+?>
