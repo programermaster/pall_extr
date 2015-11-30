@@ -78,7 +78,8 @@ class PallExtractor
 			//$urls =  array("http://www.pall.com/main/biopharmaceuticals/product.page?lid=gu7uclgl");
 			//$urls =  array("http://www.pall.com/main/biopharmaceuticals/product.page?lid=hdf24174");
 			//$urls =  array("http://www.pall.com/main/laboratory/product.page?lid=gri78mb1");
-			$urls =  array("http://www.pall.com/main/laboratory/product.page?lid=gri78m6o");
+			//$urls =  array("http://www.pall.com/main/laboratory/product.page?lid=gri78m6o");
+                        $urls =  array("http://www.pall.com/main/laboratory/product.page?lid=gri78m5a");
 
 
 			$pages = $this->_parser->get_page($urls);
@@ -103,9 +104,11 @@ class PallExtractor
 	}
 
 	protected function parse_product($page, $url) {
-		$product = $this->_parser->parse_product_content($page, $url);
-		//die(print_r($product));
-		$this->_additional_content->save($product["product"], $product["product_additional_fields"]);
+		$products = $this->_parser->parse_product_content($page, $url);
+		die(print_r($products));
+                foreach($products["products"] as $key => $product){
+                    $this->_additional_content->save($product, $products["products_additional_fields"][$key]);
+                }
 	}
 
 	public function finish(){

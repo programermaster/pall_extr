@@ -4,6 +4,202 @@ Array
 (
 )
 pop-up product urls
-getting http://www.pall.com/main/laboratory/product.page?lid=gri78m6o
+getting http://www.pall.com/main/laboratory/product.page?lid=gri78m5a
 parse product page
-4249<br>22.046<br>
+Array
+(
+    [0] =>  class="partNumber"
+    [1] => 
+    [2] => 
+    [3] =>  class="orderColumn orderHiddenColumn" id="price_12460"
+    [4] =>  class="orderColumn orderHiddenColumn"
+    [5] =>  class="partNumber"
+    [6] => 
+    [7] => 
+    [8] =>  class="orderColumn orderHiddenColumn" id="price_12461"
+    [9] =>  class="orderColumn orderHiddenColumn"
+)
+xxxxxx12460<br><br>Array
+(
+    [0] =>  class="partNumber"
+    [1] => 
+    [2] => 
+    [3] =>  class="orderColumn orderHiddenColumn" id="price_12463"
+    [4] =>  class="orderColumn orderHiddenColumn"
+    [5] =>  class="partNumber"
+    [6] => 
+    [7] => 
+    [8] =>  class="orderColumn orderHiddenColumn" id="price_12464"
+    [9] =>  class="orderColumn orderHiddenColumn"
+)
+xxxxxx12463<br><br>Array
+(
+)
+xxxxxxArray
+(
+    [0] => Array
+        (
+            [title] => AcroPak 400 Capsules With Supor EKV Membrane
+            [SKU] => 12460
+            [description] => 
+<h2>For Cost-Effective Filtration of Buffers, Tissue Culture Media, and Other Biological Solutions</h2>
+<ul>
+<li>Newer technology recommended for simplified scale-up</li>
+<li>Disposable design reduces labor costs associated with assembling, cleaning, and testing stainless steel filter holders</li>
+<li>Encapsulated format for ease of use</li>
+<li>Extended life with built-in MachV asymmetric prefilter layer for maximum flow and throughput performance</li>
+<li>Low adsorption and high chemical compatibility with hydrophilic polyethersulfone membrane for high compatibility over the entire pH range and low protein binding</li>
+<li>Gamma-irradiated, non-pyrogenic, and non-cytotoxic</li>
+<li>Inherently hydrophilic for reliable integrity testing&nbsp;</li>
+</ul>
+
+
+<ul>
+<li>Suitable for sterile filtration of a wide range of fluids, including:
+<ul>
+<li>Buffers</li>
+<li>Biological fluids</li>
+<li>Cell culture media</li>
+<li>Ophthalmic products</li>
+</ul>
+</li>
+</ul>
+
+            [technical] =>  style="padding: 0px;" class="product_caption"> <a onclick="showTab_PD(\"ds_section_9\",\"ds_tab_9\"); return false;" href="#" style="padding-left: 5px;" class="order_now" id="order_now" alt="ORDER NOW">ORDER NOW</a>   <h3>Materials of Construction</h3> <ul> <li>Filter Media: Supor EKV [hydrophilic polyethersulfone (PES)] membrane</li> <li>Housing, Vent Plug, and Support Material: Polypropylene</li> <li>Filling Bell: Polycarbonate (no filling bell on sanitary flange option)</li> <li>Sealing Technology: Thermal bonding without adhesives</li> </ul> <p></p> <h3>Pore Size</h3> <ul> <li>0.2 &mu;m</li> </ul> <p></p> <h3>Effective Filtration Area</h3> <ul> <li>400 Series: 375 cm<sup>2</sup></li> <li>800 Series: 750 cm<sup>2</sup></li> <li>1500 Series: 1500 cm<sup>2</sup></li> </ul> <p></p> <h3>Dimensions</h3> <ul> <li>Housing Diameter (including valves): 9.4 cm (3.7 in.)</li> <li>400 Series Housing Length: <br />&nbsp;&nbsp; 12460: 11.7 cm (4.6 in.) <br />&nbsp;&nbsp;&nbsp;12461: 15.7 cm (6.2 in.)</li> <li>800 Series Housing Length: <br />&nbsp;&nbsp; 12463: 15.7 cm (6.2 in.) <br />&nbsp;&nbsp;&nbsp;12464: 19.7 cm (7.7 in.)</li> <li>1500 Series Housing Length: <br />&nbsp;&nbsp;&nbsp;12466: 17.4 cm (6.8 in.) <br />&nbsp;&nbsp;&nbsp;12467: 21.0 cm (8.3 in.)</li> </ul> <p></p> <h3>Inlet/Outlet Connections</h3> <ul> <li>400 Series <br />&nbsp;&nbsp;&nbsp;12460: 25 - 38 mm (1 - 1.5 in.) sanitary flange inlet/outlet connection <br />&nbsp;&nbsp;&nbsp;12461: 13 mm (1/2 in.) hose barb inlet/outlet connection</li> <li>800 Series <br />&nbsp;&nbsp;&nbsp;12463: 25 - 38 mm (1 - 1.5 in.) sanitary flange inlet/outlet connection <br />&nbsp;&nbsp;&nbsp;12464: 13 mm (1/2 in.) hose barb inlet/outlet connection</li> <li>1500 Series <br />&nbsp;&nbsp;&nbsp;12466: 25 - 38 mm (1 - 1.5 in.) sanitary flange inlet/outlet connection <br />&nbsp;&nbsp;&nbsp;12467: 13 mm (1/2 in.) hose barb inlet/outlet connection</li> </ul> <p></p> <h3>Maximum Operating Temperature</h3> <ul> <li>40 &ordm;C (104 &ordm;F) at 4.0 bar (400 kPa, 58 psi)</li> </ul> <p></p> <h3>Maximum Operating Pressure</h3> <ul> <li>5.2 bar (520 kPa, 75 psi) at 20 &ordm;C (68 &ordm;F)</li> </ul> <p></p> <h3>Recommended Integrity Test Minimum Bubble Point - Water</h3> <ul> <li>3.32 bar (332 kPa, 48 psi) Typical Water Flow Rate</li> </ul> <p></p> <h3>Typical Water Flow Rate</h3> <ul> <li>400 Series: 700 mL/min/0.1 bar (483 mL/min/psi)</li> <li>800 Series: 1.5 L/min/0.1 bar (1.0 L/min/psi)</li> <li>1500 Series: 3.2 L/min/0.1 bar (2.2 L/min/psi)</li> </ul> <p></p> <h3>Bacterial Retention</h3> <ul> <li>Lot samples retain a minimum of 10<sup>7</sup> cfu/cm<sup>2</sup> of <em>B. diminuta </em>per modified ASTM F838, current revision</li> </ul> <p></p> <h3>Endotoxin Level</h3> <ul> <li>&lt; 0.25 EU/mL using Limulus Amoebocyte Lysate (LAL) test</li> </ul> <p></p> <h3>Biological Safety</h3> <ul> <li>Passes United States Pharmacopeia (USP) Biological Reactivity Test, <em>In Vivo </em>&lt;88&gt;</li> </ul> <p></p> <h3>Sterilization</h3> <ul> <li>Sterilized by gamma irradiation and individually packaged</li> </ul> <div style="display: none;" 
+            [mincategory] => Life Sciences
+            [subcategory] => Laboratory
+            [subcategory2] => 
+            [subcategory3] => 
+            [manufacturer] => Pall Life Sciences
+            [mainimage] => http://www.pall.com/images/css_img/loading.gif
+            [weight] => 
+            [width] => 
+            [height] => 
+            [length] => 
+        )
+
+    [1] => Array
+        (
+            [title] => AcroPak 400 Capsules With Supor EKV Membrane
+            [SKU] => 
+            [description] => 
+<h2>For Cost-Effective Filtration of Buffers, Tissue Culture Media, and Other Biological Solutions</h2>
+<ul>
+<li>Newer technology recommended for simplified scale-up</li>
+<li>Disposable design reduces labor costs associated with assembling, cleaning, and testing stainless steel filter holders</li>
+<li>Encapsulated format for ease of use</li>
+<li>Extended life with built-in MachV asymmetric prefilter layer for maximum flow and throughput performance</li>
+<li>Low adsorption and high chemical compatibility with hydrophilic polyethersulfone membrane for high compatibility over the entire pH range and low protein binding</li>
+<li>Gamma-irradiated, non-pyrogenic, and non-cytotoxic</li>
+<li>Inherently hydrophilic for reliable integrity testing&nbsp;</li>
+</ul>
+
+
+<ul>
+<li>Suitable for sterile filtration of a wide range of fluids, including:
+<ul>
+<li>Buffers</li>
+<li>Biological fluids</li>
+<li>Cell culture media</li>
+<li>Ophthalmic products</li>
+</ul>
+</li>
+</ul>
+
+            [technical] =>  style="padding: 0px;" class="product_caption"> <a onclick="showTab_PD(\"ds_section_9\",\"ds_tab_9\"); return false;" href="#" style="padding-left: 5px;" class="order_now" id="order_now" alt="ORDER NOW">ORDER NOW</a>   <h3>Materials of Construction</h3> <ul> <li>Filter Media: Supor EKV [hydrophilic polyethersulfone (PES)] membrane</li> <li>Housing, Vent Plug, and Support Material: Polypropylene</li> <li>Filling Bell: Polycarbonate (no filling bell on sanitary flange option)</li> <li>Sealing Technology: Thermal bonding without adhesives</li> </ul> <p></p> <h3>Pore Size</h3> <ul> <li>0.2 &mu;m</li> </ul> <p></p> <h3>Effective Filtration Area</h3> <ul> <li>400 Series: 375 cm<sup>2</sup></li> <li>800 Series: 750 cm<sup>2</sup></li> <li>1500 Series: 1500 cm<sup>2</sup></li> </ul> <p></p> <h3>Dimensions</h3> <ul> <li>Housing Diameter (including valves): 9.4 cm (3.7 in.)</li> <li>400 Series Housing Length: <br />&nbsp;&nbsp; 12460: 11.7 cm (4.6 in.) <br />&nbsp;&nbsp;&nbsp;12461: 15.7 cm (6.2 in.)</li> <li>800 Series Housing Length: <br />&nbsp;&nbsp; 12463: 15.7 cm (6.2 in.) <br />&nbsp;&nbsp;&nbsp;12464: 19.7 cm (7.7 in.)</li> <li>1500 Series Housing Length: <br />&nbsp;&nbsp;&nbsp;12466: 17.4 cm (6.8 in.) <br />&nbsp;&nbsp;&nbsp;12467: 21.0 cm (8.3 in.)</li> </ul> <p></p> <h3>Inlet/Outlet Connections</h3> <ul> <li>400 Series <br />&nbsp;&nbsp;&nbsp;12460: 25 - 38 mm (1 - 1.5 in.) sanitary flange inlet/outlet connection <br />&nbsp;&nbsp;&nbsp;12461: 13 mm (1/2 in.) hose barb inlet/outlet connection</li> <li>800 Series <br />&nbsp;&nbsp;&nbsp;12463: 25 - 38 mm (1 - 1.5 in.) sanitary flange inlet/outlet connection <br />&nbsp;&nbsp;&nbsp;12464: 13 mm (1/2 in.) hose barb inlet/outlet connection</li> <li>1500 Series <br />&nbsp;&nbsp;&nbsp;12466: 25 - 38 mm (1 - 1.5 in.) sanitary flange inlet/outlet connection <br />&nbsp;&nbsp;&nbsp;12467: 13 mm (1/2 in.) hose barb inlet/outlet connection</li> </ul> <p></p> <h3>Maximum Operating Temperature</h3> <ul> <li>40 &ordm;C (104 &ordm;F) at 4.0 bar (400 kPa, 58 psi)</li> </ul> <p></p> <h3>Maximum Operating Pressure</h3> <ul> <li>5.2 bar (520 kPa, 75 psi) at 20 &ordm;C (68 &ordm;F)</li> </ul> <p></p> <h3>Recommended Integrity Test Minimum Bubble Point - Water</h3> <ul> <li>3.32 bar (332 kPa, 48 psi) Typical Water Flow Rate</li> </ul> <p></p> <h3>Typical Water Flow Rate</h3> <ul> <li>400 Series: 700 mL/min/0.1 bar (483 mL/min/psi)</li> <li>800 Series: 1.5 L/min/0.1 bar (1.0 L/min/psi)</li> <li>1500 Series: 3.2 L/min/0.1 bar (2.2 L/min/psi)</li> </ul> <p></p> <h3>Bacterial Retention</h3> <ul> <li>Lot samples retain a minimum of 10<sup>7</sup> cfu/cm<sup>2</sup> of <em>B. diminuta </em>per modified ASTM F838, current revision</li> </ul> <p></p> <h3>Endotoxin Level</h3> <ul> <li>&lt; 0.25 EU/mL using Limulus Amoebocyte Lysate (LAL) test</li> </ul> <p></p> <h3>Biological Safety</h3> <ul> <li>Passes United States Pharmacopeia (USP) Biological Reactivity Test, <em>In Vivo </em>&lt;88&gt;</li> </ul> <p></p> <h3>Sterilization</h3> <ul> <li>Sterilized by gamma irradiation and individually packaged</li> </ul> <div style="display: none;" 
+            [mincategory] => Life Sciences
+            [subcategory] => Laboratory
+            [subcategory2] => 
+            [subcategory3] => 
+            [manufacturer] => Pall Life Sciences
+            [mainimage] => http://www.pall.com/images/css_img/loading.gif
+            [weight] => 
+            [width] => 
+            [height] => 
+            [length] => 
+        )
+
+    [2] => Array
+        (
+            [title] => AcroPak 800 Capsules With Supor EKV Membrane
+            [SKU] => 12463
+            [description] => 
+<h2>For Cost-Effective Filtration of Buffers, Tissue Culture Media, and Other Biological Solutions</h2>
+<ul>
+<li>Newer technology recommended for simplified scale-up</li>
+<li>Disposable design reduces labor costs associated with assembling, cleaning, and testing stainless steel filter holders</li>
+<li>Encapsulated format for ease of use</li>
+<li>Extended life with built-in MachV asymmetric prefilter layer for maximum flow and throughput performance</li>
+<li>Low adsorption and high chemical compatibility with hydrophilic polyethersulfone membrane for high compatibility over the entire pH range and low protein binding</li>
+<li>Gamma-irradiated, non-pyrogenic, and non-cytotoxic</li>
+<li>Inherently hydrophilic for reliable integrity testing&nbsp;</li>
+</ul>
+
+
+<ul>
+<li>Suitable for sterile filtration of a wide range of fluids, including:
+<ul>
+<li>Buffers</li>
+<li>Biological fluids</li>
+<li>Cell culture media</li>
+<li>Ophthalmic products</li>
+</ul>
+</li>
+</ul>
+
+            [technical] =>  style="padding: 0px;" class="product_caption"> <a onclick="showTab_PD(\"ds_section_9\",\"ds_tab_9\"); return false;" href="#" style="padding-left: 5px;" class="order_now" id="order_now" alt="ORDER NOW">ORDER NOW</a>   <h3>Materials of Construction</h3> <ul> <li>Filter Media: Supor EKV [hydrophilic polyethersulfone (PES)] membrane</li> <li>Housing, Vent Plug, and Support Material: Polypropylene</li> <li>Filling Bell: Polycarbonate (no filling bell on sanitary flange option)</li> <li>Sealing Technology: Thermal bonding without adhesives</li> </ul> <p></p> <h3>Pore Size</h3> <ul> <li>0.2 &mu;m</li> </ul> <p></p> <h3>Effective Filtration Area</h3> <ul> <li>400 Series: 375 cm<sup>2</sup></li> <li>800 Series: 750 cm<sup>2</sup></li> <li>1500 Series: 1500 cm<sup>2</sup></li> </ul> <p></p> <h3>Dimensions</h3> <ul> <li>Housing Diameter (including valves): 9.4 cm (3.7 in.)</li> <li>400 Series Housing Length: <br />&nbsp;&nbsp; 12460: 11.7 cm (4.6 in.) <br />&nbsp;&nbsp;&nbsp;12461: 15.7 cm (6.2 in.)</li> <li>800 Series Housing Length: <br />&nbsp;&nbsp; 12463: 15.7 cm (6.2 in.) <br />&nbsp;&nbsp;&nbsp;12464: 19.7 cm (7.7 in.)</li> <li>1500 Series Housing Length: <br />&nbsp;&nbsp;&nbsp;12466: 17.4 cm (6.8 in.) <br />&nbsp;&nbsp;&nbsp;12467: 21.0 cm (8.3 in.)</li> </ul> <p></p> <h3>Inlet/Outlet Connections</h3> <ul> <li>400 Series <br />&nbsp;&nbsp;&nbsp;12460: 25 - 38 mm (1 - 1.5 in.) sanitary flange inlet/outlet connection <br />&nbsp;&nbsp;&nbsp;12461: 13 mm (1/2 in.) hose barb inlet/outlet connection</li> <li>800 Series <br />&nbsp;&nbsp;&nbsp;12463: 25 - 38 mm (1 - 1.5 in.) sanitary flange inlet/outlet connection <br />&nbsp;&nbsp;&nbsp;12464: 13 mm (1/2 in.) hose barb inlet/outlet connection</li> <li>1500 Series <br />&nbsp;&nbsp;&nbsp;12466: 25 - 38 mm (1 - 1.5 in.) sanitary flange inlet/outlet connection <br />&nbsp;&nbsp;&nbsp;12467: 13 mm (1/2 in.) hose barb inlet/outlet connection</li> </ul> <p></p> <h3>Maximum Operating Temperature</h3> <ul> <li>40 &ordm;C (104 &ordm;F) at 4.0 bar (400 kPa, 58 psi)</li> </ul> <p></p> <h3>Maximum Operating Pressure</h3> <ul> <li>5.2 bar (520 kPa, 75 psi) at 20 &ordm;C (68 &ordm;F)</li> </ul> <p></p> <h3>Recommended Integrity Test Minimum Bubble Point - Water</h3> <ul> <li>3.32 bar (332 kPa, 48 psi) Typical Water Flow Rate</li> </ul> <p></p> <h3>Typical Water Flow Rate</h3> <ul> <li>400 Series: 700 mL/min/0.1 bar (483 mL/min/psi)</li> <li>800 Series: 1.5 L/min/0.1 bar (1.0 L/min/psi)</li> <li>1500 Series: 3.2 L/min/0.1 bar (2.2 L/min/psi)</li> </ul> <p></p> <h3>Bacterial Retention</h3> <ul> <li>Lot samples retain a minimum of 10<sup>7</sup> cfu/cm<sup>2</sup> of <em>B. diminuta </em>per modified ASTM F838, current revision</li> </ul> <p></p> <h3>Endotoxin Level</h3> <ul> <li>&lt; 0.25 EU/mL using Limulus Amoebocyte Lysate (LAL) test</li> </ul> <p></p> <h3>Biological Safety</h3> <ul> <li>Passes United States Pharmacopeia (USP) Biological Reactivity Test, <em>In Vivo </em>&lt;88&gt;</li> </ul> <p></p> <h3>Sterilization</h3> <ul> <li>Sterilized by gamma irradiation and individually packaged</li> </ul> <div style="display: none;" 
+            [mincategory] => Life Sciences
+            [subcategory] => Laboratory
+            [subcategory2] => 
+            [subcategory3] => 
+            [manufacturer] => Pall Life Sciences
+            [mainimage] => http://www.pall.com/images/css_img/loading.gif
+            [weight] => 
+            [width] => 
+            [height] => 
+            [length] => 
+        )
+
+    [3] => Array
+        (
+            [title] => AcroPak 800 Capsules With Supor EKV Membrane
+            [SKU] => 
+            [description] => 
+<h2>For Cost-Effective Filtration of Buffers, Tissue Culture Media, and Other Biological Solutions</h2>
+<ul>
+<li>Newer technology recommended for simplified scale-up</li>
+<li>Disposable design reduces labor costs associated with assembling, cleaning, and testing stainless steel filter holders</li>
+<li>Encapsulated format for ease of use</li>
+<li>Extended life with built-in MachV asymmetric prefilter layer for maximum flow and throughput performance</li>
+<li>Low adsorption and high chemical compatibility with hydrophilic polyethersulfone membrane for high compatibility over the entire pH range and low protein binding</li>
+<li>Gamma-irradiated, non-pyrogenic, and non-cytotoxic</li>
+<li>Inherently hydrophilic for reliable integrity testing&nbsp;</li>
+</ul>
+
+
+<ul>
+<li>Suitable for sterile filtration of a wide range of fluids, including:
+<ul>
+<li>Buffers</li>
+<li>Biological fluids</li>
+<li>Cell culture media</li>
+<li>Ophthalmic products</li>
+</ul>
+</li>
+</ul>
+
+            [technical] =>  style="padding: 0px;" class="product_caption"> <a onclick="showTab_PD(\"ds_section_9\",\"ds_tab_9\"); return false;" href="#" style="padding-left: 5px;" class="order_now" id="order_now" alt="ORDER NOW">ORDER NOW</a>   <h3>Materials of Construction</h3> <ul> <li>Filter Media: Supor EKV [hydrophilic polyethersulfone (PES)] membrane</li> <li>Housing, Vent Plug, and Support Material: Polypropylene</li> <li>Filling Bell: Polycarbonate (no filling bell on sanitary flange option)</li> <li>Sealing Technology: Thermal bonding without adhesives</li> </ul> <p></p> <h3>Pore Size</h3> <ul> <li>0.2 &mu;m</li> </ul> <p></p> <h3>Effective Filtration Area</h3> <ul> <li>400 Series: 375 cm<sup>2</sup></li> <li>800 Series: 750 cm<sup>2</sup></li> <li>1500 Series: 1500 cm<sup>2</sup></li> </ul> <p></p> <h3>Dimensions</h3> <ul> <li>Housing Diameter (including valves): 9.4 cm (3.7 in.)</li> <li>400 Series Housing Length: <br />&nbsp;&nbsp; 12460: 11.7 cm (4.6 in.) <br />&nbsp;&nbsp;&nbsp;12461: 15.7 cm (6.2 in.)</li> <li>800 Series Housing Length: <br />&nbsp;&nbsp; 12463: 15.7 cm (6.2 in.) <br />&nbsp;&nbsp;&nbsp;12464: 19.7 cm (7.7 in.)</li> <li>1500 Series Housing Length: <br />&nbsp;&nbsp;&nbsp;12466: 17.4 cm (6.8 in.) <br />&nbsp;&nbsp;&nbsp;12467: 21.0 cm (8.3 in.)</li> </ul> <p></p> <h3>Inlet/Outlet Connections</h3> <ul> <li>400 Series <br />&nbsp;&nbsp;&nbsp;12460: 25 - 38 mm (1 - 1.5 in.) sanitary flange inlet/outlet connection <br />&nbsp;&nbsp;&nbsp;12461: 13 mm (1/2 in.) hose barb inlet/outlet connection</li> <li>800 Series <br />&nbsp;&nbsp;&nbsp;12463: 25 - 38 mm (1 - 1.5 in.) sanitary flange inlet/outlet connection <br />&nbsp;&nbsp;&nbsp;12464: 13 mm (1/2 in.) hose barb inlet/outlet connection</li> <li>1500 Series <br />&nbsp;&nbsp;&nbsp;12466: 25 - 38 mm (1 - 1.5 in.) sanitary flange inlet/outlet connection <br />&nbsp;&nbsp;&nbsp;12467: 13 mm (1/2 in.) hose barb inlet/outlet connection</li> </ul> <p></p> <h3>Maximum Operating Temperature</h3> <ul> <li>40 &ordm;C (104 &ordm;F) at 4.0 bar (400 kPa, 58 psi)</li> </ul> <p></p> <h3>Maximum Operating Pressure</h3> <ul> <li>5.2 bar (520 kPa, 75 psi) at 20 &ordm;C (68 &ordm;F)</li> </ul> <p></p> <h3>Recommended Integrity Test Minimum Bubble Point - Water</h3> <ul> <li>3.32 bar (332 kPa, 48 psi) Typical Water Flow Rate</li> </ul> <p></p> <h3>Typical Water Flow Rate</h3> <ul> <li>400 Series: 700 mL/min/0.1 bar (483 mL/min/psi)</li> <li>800 Series: 1.5 L/min/0.1 bar (1.0 L/min/psi)</li> <li>1500 Series: 3.2 L/min/0.1 bar (2.2 L/min/psi)</li> </ul> <p></p> <h3>Bacterial Retention</h3> <ul> <li>Lot samples retain a minimum of 10<sup>7</sup> cfu/cm<sup>2</sup> of <em>B. diminuta </em>per modified ASTM F838, current revision</li> </ul> <p></p> <h3>Endotoxin Level</h3> <ul> <li>&lt; 0.25 EU/mL using Limulus Amoebocyte Lysate (LAL) test</li> </ul> <p></p> <h3>Biological Safety</h3> <ul> <li>Passes United States Pharmacopeia (USP) Biological Reactivity Test, <em>In Vivo </em>&lt;88&gt;</li> </ul> <p></p> <h3>Sterilization</h3> <ul> <li>Sterilized by gamma irradiation and individually packaged</li> </ul> <div style="display: none;" 
+            [mincategory] => Life Sciences
+            [subcategory] => Laboratory
+            [subcategory2] => 
+            [subcategory3] => 
+            [manufacturer] => Pall Life Sciences
+            [mainimage] => http://www.pall.com/images/css_img/loading.gif
+            [weight] => 
+            [width] => 
+            [height] => 
+            [length] => 
+        )
+
+)
+1
